@@ -1,1 +1,3 @@
-Example of adding order to a jsonb column using ActiveRecord
+# Example of adding order to a jsonb column using ActiveRecord
+
+This app uses a jsonb column to store attributes for various hairstyles, with a uuid as a root key for each hairstyle. Since jsonb does not persist the ordering of keys (https://www.postgresql.org/docs/9.4/static/datatype-json.html), measures needed to be taken in order to add order to the hairstyles. This app also utilizes the Rails 5 attributes API for serializing and deserializing the ordered hairstyles, making it transparent (http://edgeapi.rubyonrails.org/classes/ActiveRecord/Attributes/ClassMethods.html). That is, when you look at the column via ActiveRecord, the hairstyles appear ordered, without any additional ordering information. The idea for using the attributes API for this case came from nvisium.com's blog (https://nvisium.com/blog/2015/06/22/using-rails-5-attributes-api-today-in/).
