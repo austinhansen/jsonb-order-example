@@ -1,16 +1,13 @@
 .hairstyle {
   padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  background-color: #999;
-  margin-bottom: 5px;
   max-width: 30%;
+  clear: left;
 
-  .hairstyle-properties: {
+  .hairstyle-properties {
     float: left;
   }
 
-  .hairstyle-links: {
+  .hairstyle-links {
     float: right;
   }
 }

@@ -1,6 +1,6 @@
 <h1>Hairstyles</h1>
 
-<% @hairstyle_list.styles.each do |style| %>
+<% @hairstyle_list.styles.each_with_index do |style, index| %>
   <div class="hairstyle">
     <div class="hairstyle-properties">
       Hair colour: <%= style.colour.titleize %><br />
@@ -10,7 +10,12 @@
     </div>
 
     <div class="hairstyle-links">
-
+      <% unless index == 0 %>
+        <%= link_to "Move up", hairstyle_list_path(@hairstyle_list, style_id: style.id, direction: :up), method: :put %>
+      <% end %>
+      <% unless index == @hairstyle_list.styles.count - 1 %>
+        <%= link_to "Move down", hairstyle_list_path(@hairstyle_list, style_id: style.id, direction: :down), method: :put %>
+      <% end %>
     </div>
   </div>
 <% end %>

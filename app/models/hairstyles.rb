@@ -1,6 +1,4 @@
 class Hairstyles
-  attr_reader :styles
-
   def initialize(hairstyles_attrs)
     @hairstyles_attrs = hairstyles_attrs
   end
