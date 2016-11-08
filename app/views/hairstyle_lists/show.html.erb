@@ -1,1 +1,16 @@
 <h1>Hairstyles</h1>
+
+<% @hairstyle_list.styles.each do |style| %>
+  <div class="hairstyle">
+    <div class="hairstyle-properties">
+      Hair colour: <%= style.colour.titleize %><br />
+      Part: <%= style.part.titleize %><br />
+      Style: <%= style.style.titleize %><br />
+      Length: <%= style.length.titleize %>
+    </div>
+
+    <div class="hairstyle-links">
+
+    </div>
+  </div>
+<% end %>
